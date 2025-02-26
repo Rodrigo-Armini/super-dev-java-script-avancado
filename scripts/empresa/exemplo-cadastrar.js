@@ -1,3 +1,4 @@
+let urlAPI = "https://public.franciscosensaulas.com"
 const campoCnpj = document.getElementById('campoCNPJ');
 const mascara = {
     mask: "00.000.000/0000-00"
@@ -9,7 +10,7 @@ let botaoSalvar = document.getElementById("btn-salvar");
 botaoSalvar.addEventListener('click', salvar);
 
 
-function salvar(e) {
+async function salvar(e) {
     e.preventDefault(); // form não deve ser enviado, interrompe o envio do formulário 
     let campoNome = document.getElementById("campoNome");
     let nome = campoNome.value
@@ -25,7 +26,20 @@ function salvar(e) {
 
     let cnpj = campoCnpj.value;
 
-    console.log("Passou por aquio: " + nome);
-    console.log("CNPJ: " + cnpj);
-
+    const dados = {
+        nome: nome,
+        cnpj: cnpj
+    }
+    let url = `${urlAPI}/api/v1/empresa`;
+    const resposta = await fetch(url, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(dados)
+    });
+    
+    if(resposta.ok == false){
+        alert("Não foi possível cadastrar")
+    }else{
+        location.href = '/empresa/index.html';
+    }
 } 
