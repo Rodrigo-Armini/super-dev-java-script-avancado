@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa</title>
+    <title>Produto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/80793a8067.js" defer crossorigin="anonymous"></script>
@@ -13,24 +13,24 @@
 <body>
     <header class="bg-dark p-2">
         <a href="/index.html" class="btn btn-outline-info"><i class="fas fa-home"></i> Home</a>
-        <a href="/empresa/index.html" class="btn btn-outline-info"><i class="fas fa-building"></i> Empresa</a>
+        <a href="/empresa/index.html" class="btn btn-outline-info"><i class="fa-brands fa-product-hunt"></i> Produto</a>
     </header>
 
     <div class="text-end mt-3 me-3">
         <button class="btn btn-primary" id="consultar-empresas">
-            <i class="fas fa-spinner"></i> Consultar Empresa
+            <i class="fas fa-spinner"></i> Consultar Produto
         </button>
-        <a href="cadastro.html" class="btn btn-primary"><i class="fas fa-plus"></i> Cadastrar Empresa</a>
+        <a href="cadastro.html" class="btn btn-primary"><i class="fas fa-plus"></i> Cadastrar Produto</a>
     </div>
 
     <div class="p-3">
-        <table class="table table-bordered table-hover" id="tabela-empresas">
+        <table class="table table-bordered table-hover" id="tabela-produtos">
             <thead class="table-success">
                 <tr>
-                    <th>Código</th>
+                    <th>ID</th>
                     <th>Nome</th>
-                    <th>CNPJ</th>
-                    <th>Ação</th>
+                    <th>Preço</th>
+                    <th>Categoria</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,7 +43,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-    <script src="/scripts/empresa/exemplo-listar-todos.js"></script>
+    <script src="/scripts/produto/exemplo-listar-todos.js"></script>
 
 
     <!-- 
